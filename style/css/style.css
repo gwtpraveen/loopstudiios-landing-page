@@ -65,6 +65,9 @@ body {
   color: hsl(0deg, 0%, 55%);
 }
 
+.ourCreation {
+  text-align: center;
+}
 .ourCreation .header {
   margin: 5rem auto 2rem;
 }
@@ -80,6 +83,51 @@ body {
 }
 .ourCreation .header .topBtn {
   display: none;
+}
+.ourCreation .grid {
+  display: grid;
+  gap: 2rem;
+}
+.ourCreation .grid .colImg {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+.ourCreation .grid .colImg img {
+  width: 100%;
+  margin: auto;
+}
+.ourCreation .grid .colImg p {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 2rem;
+  z-index: 3;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.ourCreation .grid .colImg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.334);
+}
+.ourCreation .seeAll {
+  background-color: transparent;
+  color: black;
+  padding: 0.5rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 3px solid rgb(110, 110, 110);
+  margin: auto;
+  font-family: inherit;
+}
+.ourCreation .bottomBtn {
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 .ourCreation {
+    text-align: center;
     .header {
         margin: 5rem auto 2rem;
         .h2 {
@@ -15,5 +16,55 @@
         .topBtn {
             display: none;
         }
+    }
+
+    .grid {
+        display: grid;
+        gap: 2rem;
+        .colImg {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            img {
+                width: 100%;
+                margin: auto;
+            }
+
+            p {
+                position: absolute;
+                left: 1.5rem;
+                bottom: 2rem;
+                z-index: 3;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                color: #fff;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 5px;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.334);
+            }
+        }
+    }
+
+    .seeAll {
+        background-color: transparent;
+        color: black;
+        padding: 0.5rem 3rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        border: 3px solid rgb(110, 110, 110);
+        margin: auto;
+        font-family: inherit;
+    }
+
+    .bottomBtn {
+        margin-top: 2rem;
     }
 }
