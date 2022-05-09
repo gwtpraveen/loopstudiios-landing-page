@@ -1,0 +1,31 @@
+@use "../var/global" as *;
+
+.disSection {
+    .picture {
+        img {
+            width: 100%;
+        }
+    }
+
+    .textBox {
+        .h2 {
+            font-family: "Josefin Sans", sans-serif;
+            text-transform: uppercase;
+            max-width: 375px;
+            line-height: 2.7rem;
+            margin: auto;
+            font-size: 2.6rem;
+            font-weight: 300;
+            margin: 3rem auto 1rem;
+            text-align: center;
+        }
+
+        .discription {
+            max-width: 320px;
+            margin: auto;
+            text-align: center;
+            line-height: 29px;
+            color: hsl(0, 0%, 55%);
+        }
+    }
+}

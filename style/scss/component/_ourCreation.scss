@@ -1,0 +1,19 @@
+.ourCreation {
+    .header {
+        margin: 5rem auto 2rem;
+        .h2 {
+            font-family: "Josefin Sans", sans-serif;
+            text-transform: uppercase;
+            max-width: 375px;
+            line-height: 2.7rem;
+            margin: auto;
+            font-size: 2.6rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .topBtn {
+            display: none;
+        }
+    }
+}
