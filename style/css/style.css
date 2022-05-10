@@ -67,6 +67,8 @@ body {
 
 .ourCreation {
   text-align: center;
+  max-width: 1000px;
+  margin: auto;
 }
 .ourCreation .header {
   margin: 5rem auto 2rem;
@@ -111,10 +113,17 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 5px;
+  bottom: 3px;
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.334);
+  transition: 500ms ease;
+}
+.ourCreation .grid .colImg:hover::after {
+  background-color: rgba(255, 255, 255, 0.774);
+}
+.ourCreation .grid .colImg:hover p {
+  color: #000;
 }
 .ourCreation .seeAll {
   background-color: transparent;
@@ -128,6 +137,41 @@ body {
 }
 .ourCreation .bottomBtn {
   margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+  .ourCreation .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ourCreation .header .h2 {
+    margin: 0;
+  }
+  .ourCreation .header .topBtn {
+    display: block;
+    margin: 0;
+  }
+  .ourCreation .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .ourCreation .grid .colImg {
+    width: 100%;
+  }
+  .ourCreation .grid .colImg p {
+    text-align: left;
+  }
+  .ourCreation .bottomBtn {
+    display: none;
+  }
+}
+.footer {
+  background-color: black;
+  color: #fff;
+  margin-top: 6rem;
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

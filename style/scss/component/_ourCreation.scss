@@ -1,5 +1,7 @@
 .ourCreation {
     text-align: center;
+    max-width: 1000px;
+    margin: auto;
     .header {
         margin: 5rem auto 2rem;
         .h2 {
@@ -45,10 +47,19 @@
                 content: "";
                 position: absolute;
                 top: 0;
-                bottom: 5px;
+                bottom: 3px;
                 left: 0;
                 right: 0;
                 background-color: rgba(0, 0, 0, 0.334);
+                transition: 500ms ease;
+            }
+
+            &:hover::after {
+                background-color: rgba(255, 255, 255, 0.774);
+            }
+
+            &:hover p {
+                color: #000;
             }
         }
     }
@@ -66,5 +77,39 @@
 
     .bottomBtn {
         margin-top: 2rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .ourCreation {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .h2 {
+                margin: 0;
+            }
+    
+            .topBtn {
+                display: block;
+                margin: 0;
+            }
+        }
+        .grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+
+            .colImg {
+                width: 100%;
+                p {
+                    text-align: left;
+                }
+            }
+            
+        }
+
+        .bottomBtn {
+            display: none;
+        }
     }
 }
