@@ -4,6 +4,10 @@
     background: url(../../images/mobile/image-hero.jpg) no-repeat center center/cover;
     min-height: 80vh;
 
+    .container {
+        padding: 0 10px;
+    }
+
     .navLinks {
         display: none;
     }
@@ -31,7 +35,6 @@
         font-weight: 300;
         margin-top: 30vh;
     }
-
 }
 
 @media (min-width: 375px) {

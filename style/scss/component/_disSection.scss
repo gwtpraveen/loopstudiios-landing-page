@@ -3,6 +3,7 @@
 .disSection {
     max-width: 1080px;
     margin: 5rem auto 7rem;
+    padding: 0 10px;
     .picture {
         img {
             width: 100%;
@@ -30,7 +31,7 @@
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 918px) {
     .disSection {
         position: relative;
 
