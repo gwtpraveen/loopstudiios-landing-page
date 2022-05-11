@@ -1,7 +1,107 @@
 .footer {
-    background-color: black;
-    color: #fff;
     margin-top: 6rem;
     padding: 3rem 1rem;
-    text-align: center;
+    background-color: black;
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        
+        .nav {
+            .links {
+                list-style-type: none;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 600px) {
+    .footer {
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .nav {
+                text-align: left;
+
+                .logo {
+                    margin-bottom: 1.5rem;
+                }
+                .links {
+                    display: flex;
+                    gap: 2rem;
+
+                    @keyframes line {
+                        0% {
+                            width: 0%;
+                        }
+        
+                        50% {
+                            width: 100%;
+                        }
+        
+                        100% {
+                            width: 60%;
+                        }
+                    }
+
+                    li {
+                        position: relative;
+                        cursor: pointer;
+                        &::after {
+                            content: "";
+                            background-color: #fff;
+                            width: 60%;
+                            height: 4px;
+                            position: absolute;
+                            bottom: -10px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-radius: 5px;
+                            display: none;
+                            animation: line;
+                            animation-duration: 500ms;
+                        }
+
+                        &:hover::after {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .socialIconsAndCopyRight {
+                text-align: right;
+
+                .socialLinks {
+                    margin-bottom: 1.5rem;
+                    img + img {
+                        margin-left: .5rem;
+                    }
+
+                    img {
+                        position: relative;
+                        cursor: pointer;
+                        padding-bottom: 10px;
+                        border-bottom: 3px solid transparent;
+                        transition: 500ms ease;
+
+                        &:hover {
+                            border-color: #fff;
+                        }
+                    }
+                }
+
+                .copyRight {
+                    opacity: .4;
+                }
+            }
+        }
+    }
 }

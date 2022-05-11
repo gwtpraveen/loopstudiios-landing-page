@@ -45,10 +45,11 @@ body {
 }
 @media (min-width: 600px) {
   .hero {
-    min-height: 50vh;
+    min-height: 40vh;
+    padding-bottom: 5%;
   }
   .hero .h1 {
-    margin: 10% 0 0 0;
+    margin: 10% 0;
     max-width: 440px;
   }
   .hero .container {
@@ -100,7 +101,7 @@ body {
     align-items: center;
     color: #fff;
     list-style-type: none;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   .hero .nav .navLinks .mobile {
     display: none;
@@ -258,11 +259,92 @@ body {
   }
 }
 .footer {
-  background-color: black;
-  color: #fff;
   margin-top: 6rem;
   padding: 3rem 1rem;
+  background-color: black;
+}
+.footer .container {
+  max-width: 1000px;
+  margin: auto;
+  color: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer .container .nav .links {
+  list-style-type: none;
+}
+
+@media (min-width: 600px) {
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .container .nav {
+    text-align: left;
+  }
+  .footer .container .nav .logo {
+    margin-bottom: 1.5rem;
+  }
+  .footer .container .nav .links {
+    display: flex;
+    gap: 2rem;
+  }
+  @keyframes line {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 60%;
+    }
+  }
+  .footer .container .nav .links li {
+    position: relative;
+    cursor: pointer;
+  }
+  .footer .container .nav .links li::after {
+    content: "";
+    background-color: #fff;
+    width: 60%;
+    height: 4px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    display: none;
+    animation: line;
+    animation-duration: 500ms;
+  }
+  .footer .container .nav .links li:hover::after {
+    display: block;
+  }
+  .footer .container .socialIconsAndCopyRight {
+    text-align: right;
+  }
+  .footer .container .socialIconsAndCopyRight .socialLinks {
+    margin-bottom: 1.5rem;
+  }
+  .footer .container .socialIconsAndCopyRight .socialLinks img + img {
+    margin-left: 0.5rem;
+  }
+  .footer .container .socialIconsAndCopyRight .socialLinks img {
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+    transition: 500ms ease;
+  }
+  .footer .container .socialIconsAndCopyRight .socialLinks img:hover {
+    border-color: #fff;
+  }
+  .footer .container .socialIconsAndCopyRight .copyRight {
+    opacity: 0.4;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
