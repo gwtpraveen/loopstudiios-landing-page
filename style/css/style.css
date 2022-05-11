@@ -43,6 +43,69 @@ body {
     background-image: url(../../../images/desktop/image-hero.jpg);
   }
 }
+@media (min-width: 600px) {
+  .hero {
+    min-height: 50vh;
+  }
+  .hero .h1 {
+    margin: 10% 0 0 0;
+    max-width: 440px;
+  }
+  .hero .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  .hero .nav {
+    width: 100%;
+    max-width: none;
+  }
+  .hero .nav .hamburgerIcon {
+    display: none;
+  }
+  @keyframes line {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 60%;
+    }
+  }
+  .hero .nav li + li {
+    position: relative;
+    cursor: pointer;
+  }
+  .hero .nav li + li::after {
+    content: "";
+    background-color: #fff;
+    width: 60%;
+    height: 4px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    display: none;
+    animation: line;
+    animation-duration: 500ms;
+  }
+  .hero .nav li + li:hover::after {
+    display: block;
+  }
+  .hero .nav .navLinks {
+    display: block;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    list-style-type: none;
+    gap: 1rem;
+  }
+  .hero .nav .navLinks .mobile {
+    display: none;
+  }
+}
 .disSection {
   max-width: 1080px;
   margin: 5rem auto 7rem;
@@ -148,6 +211,7 @@ body {
 }
 .ourCreation .grid .colImg:hover::after {
   background-color: rgba(255, 255, 255, 0.774);
+  cursor: pointer;
 }
 .ourCreation .grid .colImg:hover p {
   color: #000;
