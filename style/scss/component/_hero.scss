@@ -10,6 +10,7 @@
 
     .navLinks {
         display: none;
+        list-style-type: none;
     }
 
     .nav {
@@ -37,7 +38,41 @@
     }
 }
 
-@media (min-width: 375px) {
+@media (max-width: 600px) {
+    body.show {
+        overflow: hidden;
+    }
+
+    body.show .hero {
+        .navLinks {
+            display: block;
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 4rem 2rem;
+
+            & li:first-child {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 8rem;
+            }
+
+            li + li {
+                margin-top: 1.5rem;
+                font-family: $font-thin;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
     .hero {
         background-image: url(../../../images/desktop/image-hero.jpg);
     }
@@ -103,11 +138,9 @@
             }
 
             .navLinks {
-                display: block;
                 display: flex;
                 align-items: center;
                 color: #fff;
-                list-style-type: none;
                 gap: 1.5rem;
 
                 .mobile {
