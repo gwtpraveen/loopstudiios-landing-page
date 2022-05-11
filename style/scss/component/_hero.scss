@@ -42,7 +42,17 @@
     body.show {
         overflow: hidden;
     }
+    
+    @keyframes navShow {
+        0% {
+            left: 100%;
+        }
 
+        100% {
+            left: 0;
+        }
+    }
+    
     body.show .hero {
         .navLinks {
             display: block;
@@ -54,6 +64,8 @@
             right: 0;
             bottom: 0;
             padding: 4rem 2rem;
+            animation-name: navShow;
+            animation-duration: 1s;
 
             & li:first-child {
                 display: flex;

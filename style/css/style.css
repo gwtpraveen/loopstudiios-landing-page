@@ -47,6 +47,14 @@ body {
     overflow: hidden;
   }
 
+  @keyframes navShow {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
   body.show .hero .navLinks {
     display: block;
     background-color: #000;
@@ -57,6 +65,8 @@ body {
     right: 0;
     bottom: 0;
     padding: 4rem 2rem;
+    animation-name: navShow;
+    animation-duration: 1s;
   }
   body.show .hero .navLinks li:first-child {
     display: flex;
@@ -271,7 +281,7 @@ body {
   margin-top: 2rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 775px) {
   .ourCreation .header {
     display: flex;
     justify-content: space-between;
@@ -331,7 +341,7 @@ body {
   opacity: 0.4;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 775px) {
   .footer .container {
     flex-direction: row;
     justify-content: space-between;
